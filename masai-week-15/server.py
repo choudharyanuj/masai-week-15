@@ -2,7 +2,9 @@ from flask import Flask
 from flask import request
 import json
 import csv
+from flask_cors import CORS
 app = Flask(__name__)
+CORS(app)
 def read_csv():
     arr_id = []
     arr_img = []
@@ -26,7 +28,6 @@ def add_csv():
     price = request.json['price']
     quantity = request.json['quantity']
     count = 1
-    # id = len(arr_id) + 1
     arr_id, arr_img, arr_name, arr_price, arr_quantity = read_csv()
     arr_id.append(id)
     arr_img.append(img)
@@ -108,7 +109,7 @@ def delete(id):
     with open('data/stock.csv') as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
-            if int(row['id']) != id:
+            if int(row['id']) != id:    
                 arr_id.append(row['id'])
                 arr_img.append(row['img'])
                 arr_name.append(row['name'])
