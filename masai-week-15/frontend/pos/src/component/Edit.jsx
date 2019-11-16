@@ -30,8 +30,8 @@ class Edit extends React.Component {
     }
     render() {
         return (
-            <>
-                {/* <Link to="/home"><button className="btn btn-secondary offset-5 mt-4">Go To Home</button></Link> */}
+            <div>
+                <Link to="/home"><button className="btn btn-secondary offset-5 mt-4">Go To Home</button></Link>
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group w-50 offset-2 mt-2">
                         <label>Update Price</label>
@@ -41,7 +41,7 @@ class Edit extends React.Component {
                     </div>
                     <button type="submit" className="btn btn-primary offset-2" >Submit</button>
                 </form>
-            </>
+            </div>
         )
     }
 
