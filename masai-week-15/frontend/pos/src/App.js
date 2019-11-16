@@ -11,7 +11,7 @@ function App() {
     <div className="row offset-2">
        <Router>
         <Route path="/home"><Home /></Route>
-        <Route path="/change/:item_no" render={(props) => { return (<Edit  {...props} />) }} ></Route>
+        <Route path="/change/:id" render={(props) => { return (<Edit  {...props} />) }} ></Route>
         {/* <Route path="/delete/:item_no" render={(props) => { return (<Delete  {...props} />) }}></Route> */}
         {/* <Route path="/mark/:item_no" render={(props) => { return (<Mark  {...props} />) }}></Route> */}
         <Route path="/create"><Create /></Route>

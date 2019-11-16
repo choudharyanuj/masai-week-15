@@ -28,7 +28,7 @@ class Create extends React.Component {
                 alert("Created")
             })
             .catch((err) => alert(err))
-    }
+    }   
     render() {
         return (
             <div>

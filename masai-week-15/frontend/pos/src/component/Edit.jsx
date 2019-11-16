@@ -22,7 +22,7 @@ class Edit extends React.Component {
 
         }
         console.log(JSON.stringify(editItemDetails))
-        Axios.post("http://127.0.0.1:5000/edit/" + this.props.match.params.id, editItemDetails)
+        Axios.post(`http://127.0.0.1:5000/edit/` + this.props.match.params.id, editItemDetails)
             .then((response) => {
                 alert("Edit Successfully")
             })
